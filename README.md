@@ -27,11 +27,10 @@ python train_proto.py
 ## Citation
 If you use our code in your research, please cite the following article:
 ```
-@article{ding2022structural,
-  title={Structural and Semantic Contrastive Learning for Self-supervised Node Representation Learning},
+@inproceedings{ding2023structural,
+  title={Eliciting Structural and Semantic Global Knowledge in Unsupervised Graph Contrastive Learning},
   author={Ding, Kaize and Wang, Yancheng and Yang, Yingzhen and Liu, Huan},
-  journal={arXiv e-prints},
-  pages={arXiv--2202},
-  year={2022}
+  booktitle={AAAI},
+  year={2023}
 }
 ```
