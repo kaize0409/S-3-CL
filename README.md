@@ -19,10 +19,6 @@ scikit_learn==0.22.1
 
 ```
 
-## Usage
-```
-python train_proto.py
-```
 
 ## Citation
 If you use our code in your research, please cite the following article:
