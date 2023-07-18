@@ -150,4 +150,3 @@ def train(dataset):
             proto_norm_momt = get_proto_norm(out_momt, ori_center, label_kmeans_ori)
 
     print('Best gnn classification accuracy: ' + str(best_acc_clf))
-
