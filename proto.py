@@ -151,33 +151,3 @@ def train(dataset):
 
     print('Best gnn classification accuracy: ' + str(best_acc_clf))
 
-
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description='train',
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--name', type=str, default='cite')
-    parser.add_argument('--k', type=int, default=None)
-    parser.add_argument('--lr', type=float, default=1e-4)
-    parser.add_argument('--n_clusters', default=1, type=int)
-    parser.add_argument('--n_z', default=200, type=int)
-    parser.add_argument('--pretrain_path', type=str, default='pkl')
-    args = parser.parse_args()
-    args.cuda = torch.cuda.is_available()
-
-    args.cuda = False
-
-    print("use cuda: {}".format(args.cuda))
-    device = torch.device("cuda" if args.cuda else "cpu")
-
-    args.pretrain_path = 'data/{}.pkl'.format(args.name)
-    dataset = load_data(args.name)
-    args.lr = 1e-4
-    args.n_input = 3703
-    args.n_clusters = 1
-
-    print(args)
-    train(dataset)
-
